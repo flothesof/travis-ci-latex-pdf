@@ -1,16 +1,13 @@
 before_install:
-- "sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended"
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 script:
 - mkdir _build
-- pdflatex -output-directory _build tex/your_file_1.tex
-- pdflatex -output-directory _build tex/your_file_2.tex
+- pdflatex -output-directory _build tex/cv.tex
 deploy:
   provider: releases
   api_key:
-    secure: [YOUR KEY]
-  file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
-  skip_cleanup: true
+    secure: cA7bu/lDae7cW4r14bSBmTwk+s9Mt32z1jEaRpDpLcWFeT31lFeU47Y1ehjw9oHdSaxqwcSY9YmfL8+QCgiCizxzhpDv8zTV+xPISYUCIJH3QjDREvghm556QTacKQMdLzja2JriFK5qEjkEpFe1A7CK+9t7/xo6uSvpFfRLNXw/Y6z4F0LY4JLwNkiwcfgkUidBjrfpdopkQ4cgLXcoYE0/lNqyIsuv9jm8X2QZDEKejex1wnZGX9yYBR5tNVeaZs0+qW+aIYs8o17Dql4tDxdQFGr5vGJCBAPQ+7YYBIFiufqNrqTjjNQiSg63ccmBQnfSajRVkhgL91HmMczIqOpv427N5dDhj9ACUPvOykFR3+a2dQ28FwUE6HNzVpmWOon1vpVri/Ut/NyBMg1PfKoGyG5jW3Mb7lBtwCTjsvgsD21q+GY1pj4ommx2eeFtRMKsBn2u42HTTxQUJIpmYWeiLu8+KMZo2vlbJYpxugg7dKPe8ghkpTB392nrVHsGmcjTqXclmPwpRMgvy8XZSOZKAA0EPt/dBI82ZzHxW8mR+gOLghjba7J9NbQoHniEuH9VZwHRAFw5mSAf4wFmf3xCH6kCGLOgOe+82lrpHtATOaxEOudwkqo8CqlPVzuGYT6ooDBkaD9A/o9Cs5xP+P2geSODb8ThnxcjXf3dU60=
+  file: _build/cv.pdf
   on:
-    tags: true
+    repo: flothesof/travis-ci-latex-pdf

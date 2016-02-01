@@ -1,5 +1,4 @@
 #!bin/sh
-apt-get install texlive-common unzip texlive-binaries texlive-latex-recomended texlive-latex-recomended
 mkdir -p /usr/local/share/texmf/tex/latex/moderncv
 wget https://launchpad.net/moderncv/trunk/1.5.1/+download/moderncv-1.5.1.zip
 unzip moderncv-1.5.1.zip

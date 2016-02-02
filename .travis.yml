@@ -5,7 +5,7 @@ before_install:
 - sudo sh ./install_moderncv.sh
 script:
 - mkdir _build
-- pdflatex -output-directory _build tex/cv.tex
+- pdflatex --interaction nonstopmode -output-directory _build tex/cv.tex
 deploy:
   provider: releases
   api_key:

@@ -5,7 +5,8 @@ before_install:
 - sudo sh ./install_moderncv.sh
 script:
 - mkdir _build
-- bibtex tex/my_publications.bib 
+- pdflatex --interaction nonstopmode -output-directory _build tex/cv.tex
+- cd cv/ && bibtex cv
 - pdflatex --interaction nonstopmode -output-directory _build tex/cv.tex
 deploy:
   provider: releases

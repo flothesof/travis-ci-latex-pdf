@@ -6,7 +6,7 @@ before_install:
 script:
 - mkdir _build
 - pdflatex --interaction nonstopmode -output-directory _build tex/cv.tex
-- cd cv/ && bibtex cv
+- cd _build/ && bibtex cv
 - pdflatex --interaction nonstopmode -output-directory _build tex/cv.tex
 deploy:
   provider: releases

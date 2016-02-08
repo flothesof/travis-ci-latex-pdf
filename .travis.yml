@@ -6,7 +6,7 @@ services:
   - docker
 script:
   - docker pull harshjv/texlive-2015
-  - docker run --rm -it -v $(pwd):/var/texlive harshjv/texlive-2015 pdflatex --interaction nonstopmode cv.tex 
+  - docker run --rm -it -v $(pwd):/var/texlive harshjv/texlive-2015 sudo bash run_docker.sh 
 deploy:
   provider: releases
   api_key:

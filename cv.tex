@@ -6,7 +6,7 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\usepackage{savesym}
+
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
@@ -17,9 +17,11 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{savesym}
 \savesymbol{fax}
 \usepackage{marvosym}
 \restoresymbol{MARV}{fax} % fix symbol error http://tex.stackexchange.com/questions/146138/the-package-marvosym-seems-to-clash-with-the-moderncv-class-what-can-i-do
+
 \DeclareUnicodeCharacter{20AC}{\EUR{}}
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 

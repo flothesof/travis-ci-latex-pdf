@@ -6,7 +6,7 @@ services:
   - docker
 script:
   - docker pull harshjv/texlive-2015
-  - docker run --rm -it -v $(pwd):/var/texlive texlive-2015 pdflatex cv.tex
+  - docker run --rm -it -v $(pwd):/var/texlive harshjv/texlive-2015 pdflatex cv.tex
 deploy:
   provider: releases
   api_key:
